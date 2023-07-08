@@ -24,56 +24,46 @@
         <div class="row mt-4 mb-5">
             <div class="col-4 d-flex justify-content-between">
                 <!-- Button TableModal trigger modal -->
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalTable">Table1</button>
+                <a href="{{route('reservation')}}" type="button" class="btn btn-danger">Table1</a>
             </div>
             <div class="col-4">
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalTable">Table2</button>
+                <a href="{{route('reservation')}}" type="button" class="btn btn-danger">Table2</a>
             </div>
             <div class="col-4">
-                        <!-- Button TableModal trigger modal -->
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ModalTable">Table3</button>
+                <a href="{{route('reservation')}}" type="button" class="btn btn-danger">Table3</a>
             </div>
         </div>
         <div class="row text-center mt-4 mb-5">
             <div class="col-4 d-flex justify-content-between">
-                        <!-- Button TableModal trigger modal -->
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ModalTable">Table4</button>
+                <a href="{{route('reservation')}}" type="button" class="btn btn-danger">Table4</a>
             </div>
             <div class="col-4">
-                        <!-- Button TableModal trigger modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalTable">Table5</button>
+                <a href="{{route('reservation')}}" type="button" class="btn btn-danger">Table5</a>
             </div>
             <div class="col-4">
-                        <!-- Button TableModal trigger modal -->
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ModalTable">Table6</button>
+                <a href="{{route('reservation')}}" type="button" class="btn btn-danger">Table6</a>
             </div>
         </div>
         <div class="row text-center mt-4 mb-5">
             <div class="col-4 d-flex justify-content-between">
-                        <!-- Button TableModal trigger modal -->
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ModalTable">Table7</button>
+                <a href="{{route('reservation')}}" type="button" class="btn btn-danger">Table7</a>
             </div>
             <div class="col-4">
-                        <!-- Button TableModal trigger modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalTable">Table8</button>
+                <a href="{{route('reservation')}}" type="button" class="btn btn-danger">Table8</a>
             </div>
             <div class="col-4">
-                        <!-- Button TableModal trigger modal -->
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ModalTable">Table9</button>
+                <a href="{{route('reservation')}}" type="button" class="btn btn-danger">Table9</a>
             </div>
         </div>
         <div class="row text-center mt-4 mb-5">
             <div class="col-4 d-flex justify-content-between">
-                        <!-- Button TableModal trigger modal -->
-            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ModalTable">Table10</button>
+                <a href="{{route('reservation')}}" type="button" class="btn btn-danger">Table10</a>
             </div>
             <div class="col-4">
-                        <!-- Button TableModal trigger modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalTable">Table11</button>
+                <a href="{{route('reservation')}}" type="button" class="btn btn-danger">Table11</a>
             </div>
             <div class="col-4">
-                        <!-- Button TableModal trigger modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalTable">Table12</button>
+                <a href="{{route('reservation')}}" type="button" class="btn btn-danger">Table12</a>
             </div>
         </div>
         <div class="row text-center mt-4 mb-5">

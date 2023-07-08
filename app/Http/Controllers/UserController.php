@@ -60,6 +60,44 @@ class UserController extends Controller
         return redirect()->route('menu_user')->with('success', 'File uploaded successfully.');
     }
 
+    public function reservation() {
+        return view('user.pages.reservation');
+    }
+
+    public function reservation_store(Request $request){
+
+        // $validated = $request->validate([
+        //     'name' => 'required|unique:posts|max:255',
+        //     'phone' => 'required',
+        //     'hall' => 'required',
+        //     'date' => 'required',
+        //     'time' => 'required',
+        //     'table' => 'required',
+        //     'description' => 'required',
+        // ]);
+
+        $name = $request->name;
+        $phone = $request->phone;
+        $hall = $request->hall;
+        $date = $request->date;
+        $time = $request->time;
+        $table = $request->table;
+        $description = $request->description;
+
+
+        DB::table('reservations')->insert([
+            'name' => $name,
+            'phone' => $phone,
+            'hall' => $hall,
+            'date' => $date,
+            'time' => $time,
+            'table' => $table,
+            'description' => $description,
+        ]);
+
+        return redirect()-> route('index_user');
+    }
+
 
     
         

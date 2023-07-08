@@ -30,38 +30,31 @@ class FoodAdminController extends Controller
     //     $img->save($path . "small-" . $fileName);
     //     return "Images/imagesFood/" . $fileName;
     // }
-
+ 
+    
     public function foodStore(Request $request){
-        $food_name = $request->foodName;
-        $food_type = $request->type_food;
-        $food_price = $request->price;
+        if ($request->hasFile('image')){ 
+            $food_name = $request->foodName;
+            $food_type = $request->type_food;
+            $food_price = $request->price;
 
-        $img_food = $request->file('image');
-        // $img = $this->ImageUploader($img_food);
-        $img_name = rand(1,9999).'-'.$img_food->getClientOriginalName();
-        Image::make($img_food)->save('Images/imagesFood/'. $img_name);
+            $img_food = $request->file('image');
+            // $img = $this->ImageUploader($img_food);
+            $img_name = rand(1,9999).'-'.$img_food->getClientOriginalName();
+            Image::make($img_food)->save('Images/imagesFood/'. $img_name);
 
-        // FoodAdminController::create([
-        //     'small_explain'=>$request['small_explain'],
-        //     'title'=>$request['title'],
-        //     'body'=>$request['body'],
-        //     'important_body'=>$request['important_body'],
-        //     'quote'=>$request['quote'],
-        //     'author_quote'=>$request['author_quote'],
-        //     'index_image' => $img,
-        //     'header_image' => $img,
-        //     'text_image' => $img,
-        // ]);
+            DB::table('menu_food')->insert([
+                'name' => $food_name,
+                'type_food' => $food_type,
+                'price' => $food_price,
+                'img_food' => $img_name
+            ]);
+         }  
+        
+      
 
-        DB::table('menu_food')->insert([
-            'name' => $food_name,
-            'type_food' => $food_type,
-            'price' => $food_price,
-            'img_food' => $img_name
-        ]);
-
-        // return redirect() -> route('food_all');
-        return redirect()->route('food_all')->with('success', 'File uploaded successfully.');
+        return redirect() -> route('food_all');
+        // return redirect()->route('food_all')->with('success', 'File uploaded successfully.');   
 
     }
 
@@ -109,6 +102,8 @@ class FoodAdminController extends Controller
 
         return back();
     }
+
+  
 
    
 }

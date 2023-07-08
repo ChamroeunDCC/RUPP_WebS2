@@ -1,6 +1,8 @@
 @extends('admin.admin_master')
 @section('admin')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
 <form action="{{ route('food_store') }}" method="post" enctype="multipart/form-data">
     {{  csrf_field()  }}
     <div class="page-content">

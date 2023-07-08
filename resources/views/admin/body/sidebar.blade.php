@@ -39,7 +39,7 @@
                         <span>Hall Management</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="">User Hall</a></li>
+                        <li><a href="{{ route('hall_management') }}">User Hall</a></li>
                     </ul>
                 </li>
 

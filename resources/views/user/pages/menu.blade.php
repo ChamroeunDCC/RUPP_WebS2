@@ -49,8 +49,8 @@
                         <img width="10px" src="{{asset('Images/imagesFood/'.$foodItems->img_food)}}" alt=""/>
                         <div>
                             <h5> {{$foodItems->name}} </h5>
-                            <a href="{{ route('food_order',$foodItems->id) }}" name="price" id="price" class="btn_menu btn btn-danger">
-                                {{$foodItems->price}}$
+                            <a href="{{ route('food_order', $foodItems->id) }}"><button class="btn btn-danger">{{$foodItems->price}}$</button>
+                                
                             </a>
                         </div>
                     </div>
@@ -64,8 +64,8 @@
                     <div class="col-3">                      
                         <img id="image" width="10px" src="{{asset('Images/imagesFood/'.$foodItems->img_food)}}" alt=""/>
                         <h5 id="name"> {{$foodItems->name}} </h5>
-                        <a href="{{ route('food_order',$foodItems->id) }}" name="price" id="price" class="btn_menu btn btn-danger">
-                            {{$foodItems->price}}$
+                        <a href="{{ route('food_order', $foodItems->id) }}"><button class="btn btn-danger">{{$foodItems->price}}$</button>
+                                
                         </a>
                     </div>  
                 @endforeach
