@@ -44,18 +44,21 @@ class UserController extends Controller
     }
 
     public function storeFood(Request $request){
+        if ($request->hasFile('img_food')){ 
         $food_name = $request->name;
         $food_price = $request->price;
 
         $img_food = $request->img_food;
-        $img_name = rand(1,9999).'-'.$img_food->getClientOriginalName();
-        Image::make($img_food)->save('Images/imagesFood/'. $img_name);
+
+        
 
         DB::table('user_foods')->insert([
             'name' => $food_name,
             'price' => $food_price,
-            'img_food' => $img_name
+            'img_food' => $img_food
         ]);
+    }
+    
 
         return redirect()->route('menu_user')->with('success', 'File uploaded successfully.');
     }
@@ -102,3 +105,4 @@ class UserController extends Controller
     
         
 }
+    

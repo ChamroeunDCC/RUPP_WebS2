@@ -49,6 +49,7 @@
                                         </div>  
                                         <div class="modal-footer">
                                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                          <input type="text" name="delete" id="delete" value="{{ $foodItems->id }}">
                                           <a href="{{ route('foodDelete',$foodItems->id) }}" class="btn btn-danger">Delete</a>
                                         </div>
                                       </div>
